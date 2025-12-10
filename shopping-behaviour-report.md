@@ -58,7 +58,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, classification_report
 import os
-
+```
+```python
 # ======================================================
 # 2️⃣ Chargement du dataset via KaggleHub
 # ======================================================
@@ -79,7 +80,8 @@ df = kagglehub.load_dataset(
 
 print("Aperçu du dataset:")
 print(df.head())
-
+```
+```python
 # ======================================================
 # 3️⃣ Vérification et Nettoyage des données
 # ======================================================
@@ -97,7 +99,8 @@ df = df.drop_duplicates()
 
 print("\nDataset après nettoyage :")
 print(df.info())
-
+```
+```python
 # ======================================================
 # 4️⃣ Statistiques descriptives
 # ======================================================
@@ -106,7 +109,8 @@ print(df.describe())
 
 print("\nStatistiques catégorielles :")
 print(df.describe(include="object"))
-
+```
+```python
 # ======================================================
 # 5️⃣ Encodage des variables catégorielles
 # ======================================================
@@ -114,7 +118,8 @@ label = LabelEncoder()
 
 for col in df.select_dtypes(include="object"):
     df[col] = label.fit_transform(df[col])
-
+```
+```python
 # ======================================================
 # 6️⃣ Matrice de corrélation
 # ======================================================
@@ -128,24 +133,15 @@ sns.heatmap(
 )
 plt.title("Matrice de corrélation des caractéristiques", fontsize=16) # More descriptive title
 plt.show()
-
-
-# ======================================================
-# 7️⃣ Définition des variables & choix de la cible
-# ======================================================
-X = df.drop("Gender", axis=1)
-y = df["Gender"]
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
+```
+```python
 # ======================================================
 # 8️⃣ Modélisation avec Random Forest
 # ======================================================
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
-
+```
+```python
 # ======================================================
 # 9️⃣ Évaluation du modèle
 # ======================================================
@@ -167,7 +163,8 @@ plt.title("Matrice de confusion")
 plt.xlabel("Prédictions")
 plt.ylabel("Valeurs réelles")
 plt.show()
-
+```
+```python
 # ======================================================
 # 🔟 Importance des variables + GRAPHE
 # ======================================================
