@@ -101,20 +101,29 @@ print("\nDataset après nettoyage :")
 print(df.info())
 ```
 # Valeurs manquantes détectées : 0 sur toutes les 18 colonnes
+
 # Ce que cela signifie :
 
 # Qualité des données ⭐⭐⭐⭐⭐
 
+
 # Le dataset est complet et de haute qualité
+
 # Aucune imputation nécessaire
+
 # Pas de risque de biais introduit par le remplissage de valeurs
+
 
 
 # Prêt pour l'analyse
 
+
 # Pas besoin de techniques d'imputation complexes (KNN, MICE, etc.)
+
 # Les 3 900 observations sont exploitables immédiatement
+
 # Réduction du temps de prétraitement
+
 ```python
 # ======================================================
 # 4️⃣ Statistiques descriptives
@@ -126,13 +135,22 @@ print("\nStatistiques catégorielles :")
 print(df.describe(include="object"))
 ```
  # Distribution équilibrée : Le dataset couvre toutes les tranches d'âge adultes
+ 
 # 🎯 Cible principale : Adultes de 31-57 ans (50% des clients)
+
 # 👥 Diversité : Présence de jeunes adultes (18+) et seniors (jusqu'à 70 ans)
+
 # 📈 Marketing : Nécessité de stratégies différenciées par génération
+
+
 # Panier Moyen : ~60 USD
+
 # Ni trop bas (produits de qualité)
-# Ni trop élevé (accessibl
+
+# Ni trop élevé (accessibl)
+
 # Variabilité modérée (CV = 39.6%)
+
 
 ```python
 # ======================================================
